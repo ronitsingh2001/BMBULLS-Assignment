@@ -67,7 +67,7 @@ export default function PayoutsSection() {
         muted
         playsInline
         aria-hidden="true"
-        className="absolute scale-200  -bottom-100 object-cover opacity-40 z-1"
+        className="absolute scale-200  -bottom-25 sm:-bottom-50 md:-bottom-75 lg:-bottom-100 object-cover opacity-40 z-1"
         src="/vid.mp4"
       />
     </section>

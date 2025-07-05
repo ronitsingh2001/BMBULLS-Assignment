@@ -34,8 +34,13 @@ export const NumberRow = ({ num, title }: NumberRowProps) => {
   });
   const isEven = parseInt(num, 10) % 2 === 0;
   return (
-    <div ref={ref} className="flex min-h-[385px] w-full gap-4 z-10">
-      <div className="flex-1 text-end">
+    <div
+      ref={ref}
+      className={`flex ${
+        isEven && "flex-row-reverse md:flex-row"
+      } w-full gap-4 z-10 px-12 md:px-0`}
+    >
+      <div className={`flex-1 text-end ${!isEven && "hidden md:block"}`}>
         {isEven && (
           <div
             className={`flex flex-col transition-all duration-300 ease-out transform ${
@@ -75,7 +80,11 @@ export const NumberRow = ({ num, title }: NumberRowProps) => {
           />
         )}
       </div>
-      <div className="flex-1 flex items-start justify-start pl-4">
+      <div
+        className={`flex-1 flex items-start justify-start pl-4 ${
+          isEven && "hidden md:block"
+        }`}
+      >
         {!isEven && (
           <div
             className={`flex flex-col transition-all duration-300 ease-out transform ${

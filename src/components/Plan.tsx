@@ -91,7 +91,7 @@ export default function PlansSection() {
     <section className="w-full flex flex-col items-center justify-center px-2">
       <div className="flex flex-col gap-4 justify-center items-center py-12 pt-24">
         <Button variant="default">Compare Plan</Button>
-        <h1 className="text-5xl md:text-6xl flex flex-wrap justify-center gap-2 text-center">
+        <h1 className="text-4xl md:text-6xl flex flex-wrap justify-center gap-2 text-center px-14 leading-8 md:leading-none tracking-tighter">
           <span
             className="inline-block animate-fade-in-up opacity-0"
             style={{ animationDelay: "0ms" }}
@@ -118,12 +118,12 @@ export default function PlansSection() {
           </span>
         </h1>
 
-        <p className="flex w-full justify-center text-[#ffffffbf] animate-fade-up opacity-0">
+        <p className="flex w-full justify-center text-sm md:text-lg text-[#ffffffbf] animate-fade-up opacity-0 text-center px-32 leading-6 md:leading-none tracking-tighter">
           Flexible Deposits for Every Trader
         </p>
       </div>
       <div className="flex flex-col md:flex-row gap-6 w-full px-12">
-        <Card className="hidden md:flex flex-col justify-between py-8 pr-6 min-w-[220px] bg-transparent border-none shadow-none">
+        <Card className="hidden md:flex flex-col justify-between py-8 pr-6 bg-transparent border-none shadow-none">
           <CardHeader />
           <CardContent className="flex flex-col gap-2">
             {features.map((feature) => (
