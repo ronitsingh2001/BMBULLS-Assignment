@@ -18,7 +18,7 @@ export default function PayoutsSection() {
 
   return (
     <section className="relative w-full flex flex-col items-center justify-center overflow-hidden py-24">
-      <div className="flex flex-col gap-4 justify-center items-center">
+      <div className="flex flex-col gap-4 justify-center items-center z-10">
         <Button variant="default" className="px-8">
           Payout
         </Button>
@@ -44,22 +44,20 @@ export default function PayoutsSection() {
           $999, <motion.pre className="text-[12vw]">{rounded}</motion.pre>{" "}
           <span>+</span>
         </div>
-        <div className="mt-8">
-          <AnimatedCard>
-            <Button
-              className="bg-black group border-0 rounded-xl flex items-center hover:bg-stone-950 hover:text-white"
-              variant="outline"
-            >
-              Are you Next?
-              <span className="ml-2 group-hover:hidden transition-all">
-                <ArrowUpRight className="w-5 h-5" />
-              </span>
-              <span className="ml-2 hidden group-hover:inline transition-all">
-                <ArrowRight className="w-5 h-5" />
-              </span>
-            </Button>
-          </AnimatedCard>
-        </div>
+        <AnimatedCard>
+          <Button
+            className="bg-black group border-0 rounded-xl flex items-center hover:bg-stone-950 hover:text-white"
+            variant="outline"
+          >
+            Are you Next?
+            <span className="ml-2 group-hover:hidden transition-all">
+              <ArrowUpRight className="w-5 h-5" />
+            </span>
+            <span className="ml-2 hidden group-hover:inline transition-all">
+              <ArrowRight className="w-5 h-5" />
+            </span>
+          </Button>
+        </AnimatedCard>
       </div>
       <video
         autoPlay
@@ -67,7 +65,7 @@ export default function PayoutsSection() {
         muted
         playsInline
         aria-hidden="true"
-        className="absolute scale-200  -bottom-25 sm:-bottom-50 md:-bottom-75 lg:-bottom-100 object-cover opacity-40 z-1"
+        className="absolute scale-200 -bottom-25 sm:-bottom-50 md:-bottom-75 lg:-bottom-100 object-cover opacity-60 z-1"
         src="/vid.mp4"
       />
     </section>
