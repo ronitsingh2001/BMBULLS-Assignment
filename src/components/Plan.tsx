@@ -123,7 +123,7 @@ export default function PlansSection() {
         </p>
       </div>
       <div className="flex flex-col md:flex-row gap-6 w-full px-12">
-        <Card className="hidden md:flex flex-col justify-between py-8 pr-6 bg-transparent border-none shadow-none">
+        <Card className="hidden lg:flex flex-col justify-between py-8 pr-6 bg-transparent border-none shadow-none">
           <CardHeader />
           <CardContent className="flex flex-col gap-2">
             {features.map((feature) => (
@@ -139,7 +139,7 @@ export default function PlansSection() {
           </CardContent>
           <CardFooter />
         </Card>
-        <div className="flex-1 grid grid-cols-1 md:grid-cols-3">
+        <div className="flex-1 grid grid-cols-1 lg:grid-cols-3">
           {plans.map((plan, id) =>
             id === 1 ? (
               <AnimatedCard key={id}>
