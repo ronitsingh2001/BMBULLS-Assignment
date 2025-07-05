@@ -37,11 +37,17 @@ export const NumberRow = ({ num, title }: NumberRowProps) => {
     <div ref={ref} className="flex min-h-[385px] w-full gap-4 z-10">
       <div className="flex-1 text-end">
         {isEven && (
-          <div className="flex flex-col">
+          <div
+            className={`flex flex-col transition-all duration-300 ease-out transform ${
+              isPastHalf
+                ? "opacity-100 translate-y-0 blur-0"
+                : "opacity-0 translate-y-4 blur-sm"
+            }`}
+          >
             <p className="font-light text-xl text-white opacity-80">
               Step {num}
             </p>
-            <p className="text-2xl">{title}</p>
+            <p className="text-2xl text-white">{title}</p>
           </div>
         )}
       </div>
@@ -71,7 +77,13 @@ export const NumberRow = ({ num, title }: NumberRowProps) => {
       </div>
       <div className="flex-1 flex items-start justify-start pl-4">
         {!isEven && (
-          <div className="flex flex-col">
+          <div
+            className={`flex flex-col transition-all duration-300 ease-out transform ${
+              isPastHalf
+                ? "opacity-100 translate-y-0 blur-0"
+                : "opacity-0 translate-y-4 blur-sm"
+            }`}
+          >
             <p className="font-light text-lg opacity-50">Step {num}</p>
             <p className="text-xl opacity-100">{title}</p>
           </div>

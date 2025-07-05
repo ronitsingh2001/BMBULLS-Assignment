@@ -2,9 +2,9 @@ import Image from "next/image";
 
 export default function Footer() {
   return (
-    <div className="flex flex-col items-center justify-center py-24 gap-10">
+    <div className="flex flex-col items-center justify-center py-24 gap-10 overflow-hidden">
       <div className="relative">
-        <h1 className="text-9xl overflow-hidden flex">
+        <h1 className="text-9xl overflow-hidden flex flex-nowrap">
           Trade Anytime, <span className="text-[#a35ca2]">Anywhere.</span>
         </h1>
         <div className="absolute top-0 w-full">
