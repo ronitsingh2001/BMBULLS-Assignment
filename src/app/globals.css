@@ -151,7 +151,7 @@
 
 }
 
-.box.b {
+.box.relay {
   background: linear-gradient(black, black) padding-box,
     conic-gradient(
       from var(--border-angle),
