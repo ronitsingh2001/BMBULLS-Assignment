@@ -14,7 +14,7 @@ export default function PayoutsSection() {
   useEffect(() => {
     const controls = animate(count, 999, { duration: 300 });
     return () => controls.stop();
-  }, []);
+  }, [count]);
 
   return (
     <section className="relative w-full flex flex-col items-center justify-center overflow-hidden py-24">
